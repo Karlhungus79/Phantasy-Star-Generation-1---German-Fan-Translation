@@ -1,10 +1,61 @@
 # Phantasy Star Generation:1 – German Fan Translation
 
 Unofficial German translation of **SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1**
-(PlayStation 2, NTSC-J, SLPM-62362). Version **1.0**.
+(PlayStation 2, NTSC-J, SLPM-62362). Version **1.1**.
 
 The translation is based on FlamePurge's English script (PSCave patch v3.03). It was rendered into German,
 adapted linguistically and technically re-inserted into the game. It is not a new translation from Japanese.
+
+*Deutsche Version: siehe weiter unten (ab „Phantasy Star Generation:1 – Deutsche Fan-Übersetzung“).*
+
+## Two games in one
+
+This patch contains two games that are played differently. To avoid confusion, this readme always says which one
+it means:
+
+- **PSG1** = the PS2 remake *Phantasy Star Generation:1* itself.
+- **Original game** = the Master System classic *Phantasy Star* (1987), built into the title menu as a third entry.
+
+| | PSG1 | Original game |
+|---|---|---|
+| What it is | PS2 remake | Master System game, German translation by Karlhungus with quality-of-life updates, runs in a built-in emulator |
+| Title menu entry | Start / Continue | **Originalspiel** |
+| Extra options (experience / Meseta, random battles, running) | yes, rows in the PSG1 Options menu | yes, in the Original game's own **OPTIONEN** menu |
+| Music selection (PSG1 / PSOG / PSFM) | yes | **no** (Master System sound only) |
+| Macros | yes, in the PSG1 main menu and battle menu | yes, the Original game's own macros (4 macros) |
+| Double battle speed (Square) | yes | **no** |
+| Enemy names on/off (R1) | yes | **no** |
+| Save data | PS2 save on Memory Card | separate file `PS1SRAM` on Memory Card 1, written about 2 seconds after saving |
+| Save slots | PS2 save slots | the 5 save slots of the Master System game |
+| Back to the title screen of PSG1 | – | SELECT + START (hold for about 1 second); **PSG1 restarts, unsaved PSG1 progress is lost** |
+
+## What's new in 1.1
+
+**PSG1**
+
+- **Macros:** a new main menu entry **MAKRO** (below SYSTEM) and a fourth button in the battle menu. Set up to
+  four battle macros once, then run a whole round with a single button press. See "Macros" below.
+- **Battle speed:** hold **Square** during a battle in PSG1 for double speed.
+- **Enemy names in battle:** the on/off switch is now **R1** (it was Square). Square is now only used for the
+  battle speed.
+- **Items renamed:** *PelorieMate* is now **Cola**, *Roginine* is now **Burger**. Dialogue was adjusted
+  accordingly.
+- **Fixed:** the MAKRO entry in the main menu no longer disappears after leaving the ITEM menu.
+- **Fixed:** the macro editor only offers characters that are already in your party, also when choosing a target.
+
+**Original game**
+
+- **New:** the Master System classic *Phantasy Star* in a German translation by Karlhungus as a third entry in
+  the title menu, **Originalspiel**. It comes with quality-of-life updates: an **OPTIONEN** menu with experience /
+  Meseta x1/x2/x4, faster running and random battles on/off, plus battle macros. See "Original game" below.
+- **Notice screen** before the start (idea by FlamePurge): save in PSG1 first, otherwise the Original game cannot
+  save.
+- **Message when saving fails:** if the save data cannot be written to the Memory Card, a message appears.
+- **Controls** match PSG1: Circle confirms, Cross cancels.
+- **Fixed:** the title menu entry "Originalspiel" no longer disappears after you choose "Continue" and leave the
+  save list again, and no leftover save-game text remains on screen.
+
+Everything from version 1.0 is still included.
 
 ## What is in German?
 
@@ -12,11 +63,22 @@ adapted linguistically and technically re-inserted into the game. It is not a ne
 - Name tags in battle and enemy names (with umlauts and ß)
 - A brand-new German ending credits sequence
 - The main characters use the names from the Master System series: **Alis, Odin, Noah** and so on
+- The Original game is in German too (German translation with quality-of-life updates by Karlhungus)
 
-## Extra options in the Options menu
+### About the names
+
+The English v3.03 patch uses the names **Alisa, Tyrone, Lutz, La Shiec and Dark Falz**. FlamePurge kept them
+because the original project author, Kyence, wanted the retranslated names, and he wanted to respect her wishes.
+He has kindly agreed that this German version uses the names known from the Master System series and the
+Western releases instead: **Alis, Odin, Noah, Lassic and Dark Force**. This is a matter of taste for German
+players who know the series under these names, not a criticism of the English version.
+
+## PSG1: Extra options in the Options menu
+
+*Applies to PSG1 only, not to the Original game.*
 
 The Options menu has four additional rows. The default values match the original game, and the settings
-are stored in your save data.
+are stored in your save data. Everything can be changed at any time during play, no restart needed.
 
 | Row | Values |
 |---|---|
@@ -25,74 +87,85 @@ are stored in your save data.
 | Running | Hold button / Always |
 | Music | **PSG1** (PS2 music), **PSOG** (Master System music, normal sound), **PSFM** (Master System music with FM sound) |
 
-With PSOG and PSFM the game behaves like on the Master System: after a battle the music of the area resumes
-exactly where it was interrupted, the town music keeps playing in the clinic, and entering locations
-produces no transition sound. Switching takes effect immediately.
+- **Experience / Meseta:** both are scaled together. x1 is the original, x2 and x4 shorten the grinding.
+- **Random battles:** with "Off" you can explore Palma, Motavia and Dezoris, including all dungeons, without
+  being interrupted. Bosses and story battles still take place.
+- **Running:** "Hold button" is the classic behavior, "Always" makes the party run without a button held down.
+- **Music:** PSOG plays the original melodies by Tokuhiko Uwabo with the classic Master System sound, PSFM
+  with the warmer FM instruments of the Japanese Master System. With both, the game behaves like on the Master
+  System: after a battle the music of the area resumes exactly where it was interrupted, the town music keeps
+  playing in the clinic, and entering locations produces no transition sound. The ending credits have their own
+  fitting music. Switching takes effect immediately.
 
-Also fixed: the numbers in the results window after a battle are now displayed without gaps.
+Also: the numbers in the results window after a battle are displayed without gaps.
 
-## Highlights of the new Options menu
+## PSG1: Macros
 
-The Options menu is not just "slightly extended" – it is a small command console for **your** Phantasy Star
-adventure. Each of the four new rows makes the game more comfortable, more flexible or simply more beautiful
-in its own way, and everything can be changed **at any time during play**, with no restart.
+*Applies to PSG1 only, not to the Original game.* Macros work like in the sister project for Phantasy Star
+Generation:2.
 
-### ⚔️ Experience / Meseta (x1 / x2 / x4) – set the pace of your hero's journey
+- **Editor:** main menu, entry **MAKRO** (below SYSTEM). There are **4 macros**. For every party member you
+  choose a command (attack, technique, combo or item). The editor only offers characters that are already in
+  your party, also when choosing a target.
+- **In battle:** the battle menu has a fourth button, **MAKRO**. Pick a macro and the party carries out its
+  commands for the round.
+- **Targets:** enemy targets are chosen automatically (the first enemy still alive). Combos are allowed.
+- **Impossible commands** (for example not enough MP, or an item that is no longer there) turn into a normal
+  attack.
+- Macros are stored in your save data.
 
-- **No more endless grinding:** With x2 or x4 your experience bar *and* your purse fill up in no time. Level-ups
-  come flying at you, and the Meseta for the next suit of armor is saved up faster than a Palman antlion can
-  say "ouch".
-- **One dial, two effects:** Experience and Meseta are scaled together. No juggling, one value is enough.
-- **Just right for every kind of player:** x1 is the unspoiled original experience for purists, x2 the
-  golden middle for casual players, and x4 the turbo mode for everyone who finally wants to see the story or
-  is playing for the second or third time.
-- **Changeable at any time:** If a boss gets too tough, turn it up. If things become too easy, turn it back
-  down. Your game, your rules.
+## Controls
 
-### 🎲 Random battles (On / Off) – explore without constant interruptions
+**In PSG1**
 
-- **Undisturbed exploring:** With "Off" you can wander calmly across Palma, Motavia and Dezoris, admire the
-  landscapes and listen to the music without being pulled out of the game every few steps.
-- **Even works in dungeons:** Caves and labyrinths stay peaceful too. Mapping, hunting for chests and trying
-  out routes is wonderfully relaxed.
-- **Story stays story:** Bosses and story battles still take place. You skip nothing important, only the
-  small fry in between.
-- **Perfect for replays and videos:** If you already know the game or simply want to travel through the
-  story, you save a lot of time. And since you can switch it back to "On" at any moment, you can still go
-  monster hunting whenever you like.
+| Button | Function |
+|---|---|
+| Square (hold, in battle) | Double battle speed |
+| R1 (in battle) | Enemy names on / off |
+| Triangle (technique and item lists) | Help text on / off |
 
-### 👟 Running (Hold button / Always) – move faster, with less thumb cramp
+**In the Original game**
 
-- **"Hold button"** gives you the classic behavior of the original.
-- **"Always"** turns you into a permanent sprinter: Alis and her companions dash through the world without a
-  button held down. This spares your thumb on long stretches and noticeably speeds up the whole adventure.
-- **Short trips, big plus:** Especially on the many marches between towns, spaceports and dungeons the game
-  suddenly feels much smoother and more modern.
+| Button | Function |
+|---|---|
+| D-pad | Move |
+| Circle | Confirm (Master System button 2) |
+| Cross | Cancel (Master System button 1) |
+| Triangle | Open the command window (Master System button 1) |
+| START | Pause (Master System pause button) |
+| SELECT + START (hold for about 1 second) | Back to PSG1 (PSG1 restarts) |
+| Square | no function – there is no speed-up in the Original game |
 
-### 🎵 Music (PSG1 / PSOG / PSFM) – three soundtracks, one game, zero restarts
+## Original game
 
-- **PSG1 – the PS2 soundtrack:** The familiar, rearranged SEGA AGES music. If you know and love the game
-  this way, simply stay with it.
-- **PSOG – Master System music with classic sound:** The original melodies by Tokuhiko Uwabo in the
-  authentic sound of the Master System. Pure 8-bit nostalgia, straight from 1987.
-- **PSFM – Master System music with FM sound:** The same pieces, but with the warm, full FM instruments of
-  the Japanese Master System. The insider tip for connoisseurs, because this is how Phantasy Star sounded
-  in Japan with the FM expansion.
-- **Switch instantly:** The music changes the moment you change the option. So you can compare right in the
-  middle of Camineet which sound you like better.
-- **Authentic Master System feel:** After a battle the music of the area resumes exactly at the interrupted
-  spot (with a soft fade-in) instead of starting over. In the clinic the town music keeps playing
-  undisturbed, and entering places has no transition sound, just like in the original.
-- **Built with care:** The ending credits have their own fitting music in PSOG and PSFM, the volume was
-  balanced against the PS2 soundtrack, and the loops run cleanly.
+The title menu has a third entry, **Originalspiel**. It starts the Master System version of *Phantasy Star*
+(1987) in a German translation by Karlhungus (Marcel), including quality-of-life updates. It runs inside the
+game through a built-in Master System emulator, with picture and sound. It is the Master System game, not the
+PSG1 remake: the PSG1 extras (PSG1 Options rows, PSG1 macros, battle speed, enemy-name switch, music selection)
+do not work there. The Original game has its own extras instead:
 
-### 💾 And this applies to all four rows
+**Quality-of-life updates in the Original game** (all by Karlhungus)
 
-- **Saved in your save data:** Your settings are kept, even after quitting the game.
-- **Faithful defaults:** If you change nothing, you play exactly the original. Everything else is an offer,
-  not an obligation.
-- **Neatly fitted into the menu:** Window and cursor are sized so that even the longest choice sits properly
-  inside the brackets, in German and without cut-off text.
+- **OPTIONEN menu** with
+  - **Experience and Meseta:** x1 / x2 / x4
+  - **Faster running:** yes / no
+  - **Random battles:** on / off
+- **Macros:** up to 4 battle macros (attack and so on) to run a round with fewer button presses.
+- These settings belong to the Original game and are independent of the PSG1 options.
+
+**Saving the Original game.** In the game you save the Master System way: open the command window with
+Cross or Triangle, choose SAVE and one of the 5 save slots (not possible during a battle). The save data of the
+Original game is written to **Memory Card 1** as `PS1SRAM`, inside the folder of the PS2 game (`BISLPM-62362`),
+next to your PSG1 save games. It does not touch your PSG1 saves. That folder only exists after you have saved
+Phantasy Star Generation:1 at least once on Memory Card 1.
+
+- Therefore a **notice screen** appears before the Original game starts: save in PSG1 first. Continue with
+  Circle.
+- If the Original game cannot save, because there is no PSG1 save game on Memory Card 1, a message appears
+  for 5 seconds: "Nicht gespeichert! Zuerst PSG1 auf Memory Card 1 speichern." (Not saved! Save PSG1 to Memory
+  Card 1 first.)
+- The save data is written to the card about 2 seconds after you save inside the game. Do not remove the
+  Memory Card or switch off the console in that moment.
 
 ## Requirement: the Japanese original image
 
@@ -108,13 +181,15 @@ SHA-1:  3FAE75234774D8DB3D73228AAF8A33BEC9844D73
 
 No game data is distributed, only an xdelta patch. You must own the game yourself.
 
+**Always patch the original Japanese image**, never an already patched version 1.0.
+
 ## Applying the patch
 
 **With Delta Patcher (Windows)**
 
-1. Start [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher/releases).
+1. Start Delta Patcher: https://github.com/marco-calautti/DeltaPatcher/releases
 2. *Original file*: your Japanese `.bin`.
-3. *XDelta patch*: `PSG1_Deutsch_v1.0.xdelta`.
+3. *XDelta patch*: `PSG1_Deutsch_v1.1.xdelta`.
 4. Click *Apply patch*.
 
 > **Important:** Delta Patcher overwrites the original file. Make a copy first or enable
@@ -124,16 +199,16 @@ No game data is distributed, only an xdelta patch. You must own the game yoursel
 **With xdelta3 (command line)**
 
 ```
-xdelta3 -d -s "Original.bin" PSG1_Deutsch_v1.0.xdelta "PSG1_Deutsch_v1.0.bin"
+xdelta3 -d -s "Original.bin" PSG1_Deutsch_v1.1.xdelta "PSG1_Deutsch_v1.1.bin"
 ```
 
 **Verify the result** – the patched file must look like this:
 
 ```
-Size:   70,345,968 bytes
-CRC32:  1BD19B79
-MD5:    FA47D1015FE0F35A3876D7756BB67B1F
-SHA-1:  605C45279A741E775D10C74A37D0DA1FFF903811
+Size:   71,133,888 bytes
+CRC32:  7322991B
+MD5:    43B56032E4CF4A70E5B4EDF59452E828
+SHA-1:  F523016A98F0333EEBD286A693200204D0751B69
 ```
 
 If the patcher reports a checksum error, your image is a different dump. Check CRC32 and SHA-1 first.
@@ -141,7 +216,7 @@ If the patcher reports a checksum error, your image is a different dump. Check C
 **Starting the game:** Keep the original's `.cue` file and enter the file name of the new `.bin` in it:
 
 ```
-FILE "PSG1_Deutsch_v1.0.bin" BINARY
+FILE "PSG1_Deutsch_v1.1.bin" BINARY
   TRACK 01 MODE2/2352
     INDEX 01 00:00:00
 ```
@@ -155,10 +230,11 @@ version. A savestate keeps old graphics in memory.
 
 | | |
 |---|---|
-| Karlhungus (Marcel) | Project lead, translation, extra options, music conversion |
-| Zacke | Testing |
-| FlamePurge | Support and tools; author of the English script this version is based on |
+| Karlhungus (Marcel) | Project lead, translation, extra options, macros, music conversion, integration of the Original game; German translation of the Original game (Master System) including its quality-of-life updates |
+| Zacke | Testing and proofreading of the dialogue |
+| FlamePurge | Support and tools; author of the English script this version is based on; testing of version 1.1 and the idea of the notice screen before the Original game |
 | CUE | LZR compression algorithm, PSG-LZR / PSG-PACK |
+| Nicolas Allemand | Z80 emulation core (MIT license) used for the Original game |
 | Claude (Anthropic) | Technical support, see below |
 
 **English version (patch v3.03)**
@@ -168,7 +244,8 @@ Kyence (original project author) · FlamePurge (translation organization, retran
 Nobunaga (ending credits) · Kini · Orakio_Rob · Ignitz · Rodolfo RG · CUE · Missagh Alami · BenoitRen ·
 Polly Glot · Wolfgang Landgraf · bokokun · Ace_Aileron · KahnerC · Sega for the original.
 
-Special thanks to the [PhantasyStarCave](https://www.pscave.com) community, who made this work possible in the first place.
+Special thanks to the PhantasyStarCave community (https://www.pscave.com), who made this work possible in the
+first place.
 
 The SMS music comes from the Master System original *Phantasy Star* (Sega, Tokuhiko Uwabo). For the FM instruments
 (PSFM), emu2413 by Mitsutaka Okazaki (MIT license) was used.
@@ -176,27 +253,80 @@ The SMS music comes from the Master System original *Phantasy Star* (Sega, Tokuh
 ## Note on AI assistance
 
 Claude, an AI assistant by Anthropic, was used for the technical work (analysis of file formats, tools,
-check scripts, insertion and verification of texts and graphics). Decisions about translation, terminology
-and tone were made by the project lead himself.
+check scripts, insertion and verification of texts and graphics, programming of the extra functions). Decisions
+about translation, terminology and tone were made by the project lead himself.
 
 ## Legal
 
-SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1 and the Phantasy Star universe are © SEGA.
-This is an unofficial, non-commercial fan project and is distributed free of charge. Any commercial use is
-prohibited. Use at your own risk; please back up your original image first.
+SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1, *Phantasy Star* and the Phantasy Star universe are
+© SEGA. This is an unofficial, non-commercial fan project and is distributed free of charge. Any commercial use
+is prohibited. Use at your own risk; please back up your original image first.
 
-Please report bugs and feedback in the PSCave forum or as a GitHub issue.
+Please report bugs and feedback in the PSCave forum (https://www.pscave.com).
 
 ---
 
 # Phantasy Star Generation:1 – Deutsche Fan-Übersetzung
 
 Inoffizielle deutsche Übersetzung von **SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1**
-(PlayStation 2, NTSC-J, SLPM-62362). Version **1.0**.
+(PlayStation 2, NTSC-J, SLPM-62362). Version **1.1**.
 
 Die Übersetzung beruht auf dem englischen Skript von FlamePurge (PSCave-Patch v3.03) und wurde
 ins Deutsche übertragen, sprachlich angepasst und technisch neu eingebaut. Sie ist keine eigene
 Übersetzung aus dem Japanischen.
+
+## Zwei Spiele in einem
+
+Dieser Patch enthält zwei Spiele, die sich unterschiedlich bedienen. Damit nichts durcheinandergerät, steht in
+dieser Anleitung immer dabei, welches gemeint ist:
+
+- **PSG1** = das PS2-Remake *Phantasy Star Generation:1* selbst.
+- **Originalspiel** = der Master-System-Klassiker *Phantasy Star* (1987), als dritter Eintrag im Titelmenü
+  eingebaut.
+
+| | PSG1 | Originalspiel |
+|---|---|---|
+| Was es ist | PS2-Remake | Master-System-Spiel, deutsche Übersetzung von Karlhungus mit Komfort-Verbesserungen, läuft in einem eingebauten Emulator |
+| Eintrag im Titelmenü | Start / Fortsetzen | **Originalspiel** |
+| Zusatzoptionen (Erfahrung / Meseta, Zufallskämpfe, Rennen) | ja, Zeilen im PSG1-Optionsmenü | ja, im eigenen Menü **OPTIONEN** des Originalspiels |
+| Musikauswahl (PSG1 / PSOG / PSFM) | ja | **nein** (nur Master-System-Klang) |
+| Makros | ja, im PSG1-Hauptmenü und Kampfmenü | ja, eigene Makros des Originalspiels (4 Makros) |
+| Doppeltes Kampftempo (Viereck) | ja | **nein** |
+| Gegnernamen an/aus (R1) | ja | **nein** |
+| Spielstand | PS2-Spielstand auf der Memory Card | eigene Datei `PS1SRAM` auf Memory Card 1, wird etwa 2 Sekunden nach dem Speichern geschrieben |
+| Speicherplätze | PS2-Speicherplätze | die 5 Speicherplätze des Master-System-Spiels |
+| Zurück zu PSG1 | – | SELECT + START (ca. 1 Sekunde halten); **PSG1 startet neu, nicht gespeicherter PSG1-Fortschritt geht verloren** |
+
+## Neu in 1.1
+
+**PSG1**
+
+- **Makros:** ein neuer Hauptmenüpunkt **MAKRO** (unter SYSTEM) und ein vierter Knopf im Kampfmenü. Bis zu
+  vier Kampf-Makros einmal einrichten, dann eine ganze Runde mit einem Tastendruck ausführen. Siehe „Makros“.
+- **Kampftempo:** **Viereck** im Kampf von PSG1 gehalten = doppeltes Tempo.
+- **Gegnernamen im Kampf:** Der An/Aus-Schalter liegt jetzt auf **R1** (vorher Viereck). Viereck dient nur
+  noch dem Kampftempo.
+- **Waren umbenannt:** *PelorieMate* heißt jetzt **Cola**, *Roginine* heißt jetzt **Burger**. Die Dialoge
+  wurden angepasst.
+- **Behoben:** Der Eintrag MAKRO im Hauptmenü verschwindet nicht mehr, nachdem man das ITEM-Menü verlassen hat.
+- **Behoben:** Der Makro-Editor bietet nur Figuren an, die schon in deiner Gruppe sind, auch bei der
+  Zielauswahl.
+
+**Originalspiel**
+
+- **Neu:** der Master-System-Klassiker *Phantasy Star* in einer deutschen Übersetzung von Karlhungus als dritter
+  Eintrag im Titelmenü, **Originalspiel**. Er bringt Komfort-Verbesserungen mit: ein Menü **OPTIONEN** mit
+  Erfahrung / Meseta x1/x2/x4, schnellerem Laufen und Zufallskämpfen an/aus sowie Kampf-Makros. Siehe „Originalspiel“.
+- **Hinweisbild** vor dem Start (Idee von FlamePurge): erst in PSG1 speichern, sonst kann das Originalspiel nicht
+  speichern.
+- **Meldung bei fehlgeschlagenem Speichern:** Lässt sich der Spielstand nicht auf die Memory Card schreiben,
+  erscheint eine Meldung.
+- **Steuerung** wie in PSG1: Kreis bestätigt, Kreuz bricht ab.
+- **Behoben:** Der Titelmenüeintrag „Originalspiel“ verschwindet nicht mehr, nachdem man „Fortsetzen“ gewählt
+  und die Spielstandliste wieder verlassen hat, und es bleibt kein Text eines Spielstands auf dem Bildschirm
+  stehen.
+
+Alles aus Version 1.0 ist weiterhin enthalten.
 
 ## Was ist deutsch?
 
@@ -204,11 +334,24 @@ ins Deutsche übertragen, sprachlich angepasst und technisch neu eingebaut. Sie 
 - Namensschilder im Kampf und Gegnernamen (mit Umlauten und ß)
 - Neuer deutscher Abspann
 - Die Hauptfiguren tragen die Namen aus der Master-System-Reihe: **Alis, Odin, Noah** usw.
+- Auch das Originalspiel ist deutsch (deutsche Übersetzung von Karlhungus mit Komfort-Verbesserungen)
 
-## Zusatzoptionen im Optionsmenü
+### Zu den Namen
+
+Der englische Patch v3.03 verwendet die Namen **Alisa, Tyrone, Lutz, La Shiec und Dark Falz**. FlamePurge hat
+sie beibehalten, weil die ursprüngliche Projektautorin Kyence die neu übersetzten Namen wollte und er ihre
+Wünsche respektieren wollte. Er war freundlicherweise damit einverstanden, dass diese deutsche Fassung
+stattdessen die aus der Master-System-Reihe und den westlichen Veröffentlichungen bekannten Namen nutzt:
+**Alis, Odin, Noah, Lassic und Dark Force**. Das ist eine Geschmacksfrage für deutsche Spieler, die die Reihe
+unter diesen Namen kennen, keine Kritik an der englischen Fassung.
+
+## PSG1: Zusatzoptionen im Optionsmenü
+
+*Gilt nur für PSG1, nicht für das Originalspiel.*
 
 Das Optionsmenü hat vier zusätzliche Zeilen. Die Standardwerte entsprechen dem Originalspiel,
-die Einstellungen werden im Spielstand gespeichert.
+die Einstellungen werden im Spielstand gespeichert. Alles lässt sich jederzeit mitten im Spiel umstellen,
+ohne Neustart.
 
 | Zeile | Werte |
 |---|---|
@@ -217,76 +360,84 @@ die Einstellungen werden im Spielstand gespeichert.
 | Rennen | Taste halten / Immer |
 | Musik | **PSG1** (PS2-Musik), **PSOG** (Master-System-Musik, normaler Sound), **PSFM** (Master-System-Musik mit FM-Sound) |
 
-Bei PSOG und PSFM verhält sich das Spiel wie auf dem Master System: Nach dem Kampf setzt die Musik
-des Gebiets an der unterbrochenen Stelle wieder ein, in der Klinik läuft die Stadtmusik weiter,
-und beim Betreten von Orten gibt es kein Übergangsgeräusch. Die Umschaltung wirkt sofort.
+- **Erfahrung / Meseta:** beides wird gemeinsam skaliert. x1 ist das Original, x2 und x4 verkürzen das Grinden.
+- **Zufallskämpfe:** Mit „Aus“ erkundest du Palma, Motavia und Dezoris samt aller Dungeons ohne Unterbrechung.
+  Bosse und Story-Kämpfe finden weiterhin statt.
+- **Rennen:** „Taste halten“ ist das klassische Verhalten, „Immer“ lässt die Gruppe ohne gedrückte Taste rennen.
+- **Musik:** PSOG spielt die originalen Melodien von Tokuhiko Uwabo im klassischen Klang des Master Systems,
+  PSFM mit den wärmeren FM-Instrumenten des japanischen Master Systems. Bei beiden verhält sich das Spiel wie
+  auf dem Master System: Nach dem Kampf setzt die Musik des Gebiets an der unterbrochenen Stelle wieder ein,
+  in der Klinik läuft die Stadtmusik weiter, und beim Betreten von Orten gibt es kein Übergangsgeräusch. Der
+  Abspann hat seine eigene passende Musik. Die Umschaltung wirkt sofort.
 
-Außerdem behoben: Die Zahlen im Ergebnisfenster nach dem Kampf werden ohne Lücken dargestellt.
+Außerdem: Die Zahlen im Ergebnisfenster nach dem Kampf werden ohne Lücken dargestellt.
 
-## Die Highlights des neuen Optionsmenüs
+## PSG1: Makros
 
-Das Optionsmenü ist nicht einfach „ein bisschen erweitert“, es ist ein kleines Kommandopult für **dein**
-Phantasy-Star-Abenteuer. Jede der vier neuen Zeilen macht das Spiel auf ihre Weise bequemer, flexibler
-oder schlicht schöner – und alles lässt sich **jederzeit mitten im Spiel** umstellen, ganz ohne Neustart.
+*Gilt nur für PSG1, nicht für das Originalspiel.* Die Makros funktionieren wie im Schwesterprojekt für
+Phantasy Star Generation:2.
 
-### ⚔️ Erfahrung / Meseta (x1 / x2 / x4) – Du bestimmst das Tempo deiner Heldenreise
+- **Editor:** Hauptmenü, Eintrag **MAKRO** (unter SYSTEM). Es gibt **4 Makros**. Für jede Figur der Gruppe
+  wählst du einen Befehl (Angriff, Technik, Kombo oder Ware). Der Editor bietet nur Figuren an, die schon in
+  deiner Gruppe sind, auch bei der Zielauswahl.
+- **Im Kampf:** Das Kampfmenü hat einen vierten Knopf, **MAKRO**. Wähle ein Makro, und die Gruppe führt dessen
+  Befehle für die Runde aus.
+- **Ziele:** Gegnerziele werden automatisch gewählt (der erste noch lebende Gegner). Kombos sind erlaubt.
+- **Unmögliche Befehle** (zum Beispiel zu wenig MP oder eine Ware, die nicht mehr da ist) werden zu einem
+  normalen Angriff.
+- Die Makros werden im Spielstand gespeichert.
 
-- **Schluss mit endlosem Grinden:** Mit x2 oder x4 füllen sich Erfahrungsleiste *und* Geldbeutel in
-  Windeseile. Level-Ups fliegen dir nur so zu, und die Meseta für die nächste Rüstung ist schneller
-  beisammen, als ein Palma-Ameisenlöwe „Autsch“ sagen kann.
-- **Ein Regler, zwei Wirkungen:** Erfahrung und Meseta werden gemeinsam skaliert. Du musst nicht jonglieren,
-  ein Wert genügt.
-- **Für jeden Spielertyp das Passende:** x1 ist das ungeschönte Originalerlebnis für Puristen, x2 der
-  goldene Mittelweg für Gelegenheitsspieler, x4 die Turbo-Stufe für alle, die endlich die Story sehen
-  wollen oder das Spiel zum zweiten und dritten Mal erleben.
-- **Jederzeit änderbar:** Wird ein Boss zu zäh, drehst du hoch. Wird es dir zu leicht, drehst du wieder
-  zurück. Dein Spiel, deine Regeln.
+## Steuerung
 
-### 🎲 Zufallskämpfe (An / Aus) – Entdecken, ohne ständig gestört zu werden
+**In PSG1**
 
-- **Ungestörtes Erkunden:** Mit „Aus“ wanderst du in aller Ruhe über Palma, Motavia und Dezoris, bewunderst
-  die Landschaften und hörst die Musik, ohne alle paar Schritte aus dem Spiel gerissen zu werden.
-- **Gilt sogar im Dungeon:** Auch in den Höhlen und Labyrinthen bleibt es friedlich. Karten zeichnen,
-  Truhen suchen und Wege ausprobieren geht damit herrlich entspannt.
-- **Story bleibt Story:** Bosse und Story-Kämpfe finden weiterhin statt. Du überspringst nichts Wichtiges,
-  nur den Kleinkram dazwischen.
-- **Perfekt für Wiederholungsrunden und Videos:** Wer das Spiel schon kennt oder einfach durch die Geschichte
-  reisen möchte, spart sich eine Menge Zeit. Und weil du es jederzeit wieder auf „An“ stellen kannst,
-  gehst du gezielt auf Gegnerjagd, wenn du es willst.
+| Taste | Funktion |
+|---|---|
+| Viereck (halten, im Kampf) | Doppeltes Kampftempo |
+| R1 (im Kampf) | Gegnernamen an / aus |
+| Dreieck (Listen für Techniken und Waren) | Hilfetext an / aus |
 
-### 👟 Rennen (Taste halten / Immer) – Flotter unterwegs, mit weniger Daumenkrampf
+**Im Originalspiel**
 
-- **„Taste halten“** bietet dir das klassische Verhalten des Originals.
-- **„Immer“** macht dich zum Dauersprinter: Alis und ihre Gefährten flitzen ohne gedrückte Taste durch
-  die Welt. Das schont den Daumen bei langen Strecken und beschleunigt das ganze Abenteuer spürbar.
-- **Kurze Wege, großes Plus:** Gerade bei den vielen Märschen zwischen Städten, Raumhäfen und Dungeons
-  fühlt sich das Spiel plötzlich viel flüssiger und moderner an.
+| Taste | Funktion |
+|---|---|
+| Steuerkreuz | Bewegen |
+| Kreis | Bestätigen (Master-System-Taste 2) |
+| Kreuz | Abbrechen (Master-System-Taste 1) |
+| Dreieck | Befehlsfenster öffnen (Master-System-Taste 1) |
+| START | Pause (Pause-Taste des Master Systems) |
+| SELECT + START (ca. 1 Sekunde halten) | Zurück zu PSG1 (PSG1 startet neu) |
+| Viereck | keine Funktion – im Originalspiel gibt es keine Beschleunigung |
 
-### 🎵 Musik (PSG1 / PSOG / PSFM) – Drei Soundtracks, ein Spiel, null Neustarts
+## Originalspiel
 
-- **PSG1 – der PS2-Soundtrack:** Die gewohnte, neu arrangierte Musik von SEGA AGES. Wer das Spiel so
-  kennt und liebt, bleibt einfach dabei.
-- **PSOG – Master-System-Musik mit klassischem Sound:** Die originalen Melodien von Tokuhiko Uwabo im
-  authentischen Klang des Master Systems. Pure 8-Bit-Nostalgie, direkt aus dem Jahr 1987.
-- **PSFM – Master-System-Musik mit FM-Sound:** Dieselben Stücke, aber mit den warmen, vollen FM-Instrumenten
-  des japanischen Master Systems. Der „Geheimtipp“ für alle Kenner, denn so klang Phantasy Star damals
-  in Japan mit FM-Erweiterung.
-- **Sofort umschaltbar:** Die Musik wechselt in dem Moment, in dem du die Option änderst. Du kannst
-  also mitten in Camineet direkt vergleichen, welcher Klang dir besser gefällt.
-- **Authentisches Master-System-Gefühl:** Nach einem Kampf setzt die Musik des Gebiets genau an der
-  unterbrochenen Stelle wieder ein (mit weichem Einblenden), statt wieder von vorn zu beginnen. In der
-  Klinik läuft die Stadtmusik ungestört weiter, und beim Betreten von Orten bleibt das Übergangsgeräusch
-  weg, genau wie im Original.
-- **Bedacht und mit Liebe eingebaut:** Der Abspann hat bei PSOG und PSFM seine eigene passende Musik, die
-  Lautstärke wurde gegen den PS2-Soundtrack abgeglichen, und die Schleifen laufen sauber durch.
+Das Titelmenü hat einen dritten Eintrag, **Originalspiel**. Er startet die Master-System-Fassung von
+*Phantasy Star* (1987) in einer deutschen Übersetzung von Karlhungus (Marcel) samt Komfort-Verbesserungen. Sie
+läuft über einen eingebauten Master-System-Emulator im Spiel, mit Bild und Ton. Es ist das Master-System-Spiel,
+nicht das PSG1-Remake: Die PSG1-Extras (PSG1-Optionszeilen, PSG1-Makros, Kampftempo, Gegnernamen-Schalter,
+Musikauswahl) wirken dort nicht. Das Originalspiel hat stattdessen eigene Extras:
 
-### 💾 Und das gilt für alle vier Zeilen
+**Komfort-Verbesserungen im Originalspiel** (alle von Karlhungus)
 
-- **Im Spielstand gespeichert:** Deine Einstellungen bleiben erhalten, auch nach dem Beenden des Spiels.
-- **Originalgetreue Standardwerte:** Wer nichts ändert, spielt exakt das Original. Alles Weitere ist
-  ein Angebot, kein Zwang.
-- **Sauber ins Menü eingepasst:** Fenster und Cursor sind so bemessen, dass auch die längste Auswahl
-  ordentlich in der Klammer sitzt, auf Deutsch und ohne abgeschnittene Texte.
+- **Menü OPTIONEN** mit
+  - **Erfahrung und Meseta:** x1 / x2 / x4
+  - **Schneller laufen:** Ja / Nein
+  - **Zufallskämpfe:** An / Aus
+- **Makros:** bis zu 4 Kampf-Makros (Angriff usw.), um eine Runde mit weniger Tastendrücken auszuführen.
+- Diese Einstellungen gehören zum Originalspiel und sind unabhängig von den PSG1-Optionen.
+
+**Speichern im Originalspiel.** Im Spiel speicherst du wie am Master System: Mit Kreuz oder Dreieck das
+Befehlsfenster öffnen, SPEICHERN und einen der 5 Speicherplätze wählen (nicht während eines Kampfes). Der
+Spielstand des Originalspiels wird auf **Speicherkarte 1** als `PS1SRAM` in den Ordner des PS2-Spiels
+(`BISLPM-62362`) geschrieben, neben deine PSG1-Spielstände. Deine PSG1-Spielstände bleiben unberührt. Diesen
+Ordner gibt es erst, nachdem du Phantasy Star Generation:1 mindestens einmal auf Speicherkarte 1 gespeichert hast.
+
+- Deshalb erscheint vor dem Start des Originalspiels ein **Hinweisbild**: erst in PSG1 speichern. Weiter geht es
+  mit Kreis.
+- Kann das Originalspiel nicht speichern, weil auf Speicherkarte 1 kein PSG1-Spielstand liegt, erscheint
+  5 Sekunden lang die Meldung „Nicht gespeichert! Zuerst PSG1 auf Memory Card 1 speichern.“
+- Der Spielstand wird etwa 2 Sekunden nach dem Speichern im Spiel auf die Karte geschrieben. Die Speicherkarte
+  in diesem Moment nicht entfernen und die Konsole nicht ausschalten.
 
 ## Voraussetzung: das japanische Original-Image
 
@@ -302,13 +453,15 @@ SHA-1:  3FAE75234774D8DB3D73228AAF8A33BEC9844D73
 
 Es werden keine Spieldaten weitergegeben, sondern nur ein xdelta-Patch. Das Spiel musst du selbst besitzen.
 
+**Immer das japanische Original-Image patchen**, nie eine bereits gepatchte Version 1.0.
+
 ## Patch anwenden
 
 **Mit Delta Patcher (Windows)**
 
-1. [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher/releases) starten.
+1. Delta Patcher starten: https://github.com/marco-calautti/DeltaPatcher/releases
 2. *Original file*: dein japanisches `.bin`.
-3. *XDelta patch*: `PSG1_Deutsch_v1.0.xdelta`.
+3. *XDelta patch*: `PSG1_Deutsch_v1.1.xdelta`.
 4. *Apply patch* klicken.
 
 > **Wichtig:** Delta Patcher überschreibt die Originaldatei. Vorher eine Kopie anlegen oder in den
@@ -318,16 +471,16 @@ Es werden keine Spieldaten weitergegeben, sondern nur ein xdelta-Patch. Das Spie
 **Mit xdelta3 (Kommandozeile)**
 
 ```
-xdelta3 -d -s "Original.bin" PSG1_Deutsch_v1.0.xdelta "PSG1_Deutsch_v1.0.bin"
+xdelta3 -d -s "Original.bin" PSG1_Deutsch_v1.1.xdelta "PSG1_Deutsch_v1.1.bin"
 ```
 
 **Ergebnis prüfen** – die gepatchte Datei muss so aussehen:
 
 ```
-Größe:  70.345.968 Bytes
-CRC32:  1BD19B79
-MD5:    FA47D1015FE0F35A3876D7756BB67B1F
-SHA-1:  605C45279A741E775D10C74A37D0DA1FFF903811
+Größe:  71.133.888 Bytes
+CRC32:  7322991B
+MD5:    43B56032E4CF4A70E5B4EDF59452E828
+SHA-1:  F523016A98F0333EEBD286A693200204D0751B69
 ```
 
 Meldet der Patcher einen Prüfsummenfehler, ist dein Image ein anderer Dump. Prüfe zuerst CRC32 und SHA-1.
@@ -335,7 +488,7 @@ Meldet der Patcher einen Prüfsummenfehler, ist dein Image ein anderer Dump. Pr�
 **Starten:** Die `.cue`-Datei des Originals behalten und darin den Dateinamen der neuen `.bin` eintragen:
 
 ```
-FILE "PSG1_Deutsch_v1.0.bin" BINARY
+FILE "PSG1_Deutsch_v1.1.bin" BINARY
   TRACK 01 MODE2/2352
     INDEX 01 00:00:00
 ```
@@ -349,10 +502,11 @@ anderen Version laden. Ein Savestate hält alte Grafiken im Speicher.
 
 | | |
 |---|---|
-| Karlhungus (Marcel) | Projektleitung, Übersetzung, Zusatzoptionen, Musikumsetzung |
-| Zacke | Tests |
-| FlamePurge | Unterstützung und Werkzeuge; Autor des englischen Skripts, auf dem diese Fassung beruht |
+| Karlhungus (Marcel) | Projektleitung, Übersetzung, Zusatzoptionen, Makros, Musikumsetzung, Einbau des Originalspiels; deutsche Übersetzung des Originalspiels (Master System) samt dessen Komfort-Verbesserungen |
+| Zacke | Tests und Gegenlesen der Dialoge |
+| FlamePurge | Unterstützung und Werkzeuge; Autor des englischen Skripts, auf dem diese Fassung beruht; Tests von Version 1.1 und Idee des Hinweisbilds vor dem Originalspiel |
 | CUE | LZR-Kompressionsalgorithmus, PSG-LZR / PSG-PACK |
+| Nicolas Allemand | Z80-Emulationskern (MIT-Lizenz) für das Originalspiel |
 | Claude (Anthropic) | Technische Unterstützung, siehe unten |
 
 **Englische Fassung (Patch v3.03)**
@@ -362,7 +516,8 @@ Kyence (ursprüngliche Projektautorin) · FlamePurge (Übersetzungsorganisation,
 Nobunaga (Abspann) · Kini · Orakio_Rob · Ignitz · Rodolfo RG · CUE · Missagh Alami · BenoitRen ·
 Polly Glot · Wolfgang Landgraf · bokokun · Ace_Aileron · KahnerC · Sega für das Original.
 
-Besonderer Dank an die Community von [PhantasyStarCave](https://www.pscave.com), die diese Arbeit überhaupt möglich gemacht hat.
+Besonderer Dank an die Community von PhantasyStarCave (https://www.pscave.com), die diese Arbeit überhaupt
+möglich gemacht hat.
 
 Die SMS-Musik stammt aus dem Master-System-Original *Phantasy Star* (Sega, Tokuhiko Uwabo). Für die FM-Instrumente
 (PSFM) wurde emu2413 von Mitsutaka Okazaki (MIT-Lizenz) verwendet.
@@ -370,13 +525,14 @@ Die SMS-Musik stammt aus dem Master-System-Original *Phantasy Star* (Sega, Tokuh
 ## Hinweis zur KI-Unterstützung
 
 Bei der technischen Arbeit (Auswertung der Dateiformate, Werkzeuge, Prüfskripte, Einbau und Prüfung von Texten
-und Grafiken) wurde Claude, ein KI-Assistent von Anthropic, eingesetzt. Entscheidungen zu Übersetzung, Begriffen
-und Ton traf der Projektleiter selbst.
+und Grafiken, Programmierung der Zusatzfunktionen) wurde Claude, ein KI-Assistent von Anthropic, eingesetzt.
+Entscheidungen zu Übersetzung, Begriffen und Ton traf der Projektleiter selbst.
 
 ## Rechtliches
 
-SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1 und das Phantasy-Star-Universum sind © SEGA.
-Dies ist ein inoffizielles, nicht-kommerzielles Fan-Projekt und wird kostenlos weitergegeben. Jede kommerzielle
-Nutzung ist untersagt. Die Nutzung erfolgt auf eigene Gefahr, bitte sichere vorher dein Original-Image.
+SEGA AGES 2500 Series Vol. 1 – Phantasy Star Generation:1, *Phantasy Star* und das Phantasy-Star-Universum sind
+© SEGA. Dies ist ein inoffizielles, nicht-kommerzielles Fan-Projekt und wird kostenlos weitergegeben. Jede
+kommerzielle Nutzung ist untersagt. Die Nutzung erfolgt auf eigene Gefahr, bitte sichere vorher dein
+Original-Image.
 
-Fehler und Rückmeldungen bitte im PSCave-Forum oder als GitHub-Issue melden.
+Fehler und Rückmeldungen bitte im PSCave-Forum melden (https://www.pscave.com).
